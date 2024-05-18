@@ -84,3 +84,6 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('login')
+
+def page_not_found(request, exception):
+    return render(request, "")

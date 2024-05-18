@@ -1,0 +1,66 @@
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.auth-form {
+    background-color: goldenrod;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px goldenrod;
+    width: 400px;
+    text-align: center;
+    /* color: white; */
+}
+
+.auth-form{
+    color: white;
+}
+
+.auth-form a{
+    color: #3a3a3a;
+}
+
+h2 {
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    /* color: white; */
+}
+
+
+
+button[type="submit"] {
+    background-color: goldenrod;
+    color: white;
+    border: 1px solid #3a3a3a;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #3a3a3a;
+    transition: all 0.4s ease-in;
+}

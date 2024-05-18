@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "tasks/css/task_list.css" %}">
+{% endblock css %}
+
+{% block content %}
+<section class="todo-app">
+    <h2>Ваші завдання</h2>
+    <form class="task-input" method="post" action="{% url "home" %}">
+        {% csrf_token %}
+        {% comment %} <input type="text" id="new-task" placeholder="Add a new task" name="task"> {% endcomment %}
+        {{ form.title }}
+        <button id="add-task-btn">Додати</button>
+    </form>
+    <ul id="task-list">
+        <!-- Tasks will appear here -->
+        {% if tasks %}
+        {% for task in tasks %}
+            <li>
+                {{ task.title }}
+                <a href="{% url "task_remove" task.id %}" class="delete-btn">Delete</a>
+            </li>
+        {% endfor %}
+        {% else %}
+        <span>Завдань поки немає</span>
+        {% endif %}
+    </ul>
+    {% include "tasks/include/pagination.html" with page=tasks %}
+</section>
+{% endblock content %}

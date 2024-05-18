@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3a3a3a;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: goldenrod;
+    color: white;
+    padding: 20px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main-title{
+    text-decoration: none;
+    color: white;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.todo-app {
+    background-color: goldenrod;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px goldenrod;
+    width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+.task-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-input button {
+    width: 25%;
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.task-input button:hover {
+    scale: 90%;
+    transition: all 0.3s ease-in;
+}
+
+.task-input button:active{
+    scale: 88%;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: #3a3a3a;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    /* border: 1px solid #ddd; */
+}
+
+#task-list li .delete-btn {
+    background-color: #ff4c4c;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#task-list li .delete-btn:hover {
+    scale: 90%;
+    transition: all 0.3s ease-in-out;
+}
+
+#task-list li .delete-btn:active{
+    scale: 88%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    background-color: #3a3a3a;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination a:hover{
+    background-color:goldenrod;
+    border: 1px solid #3a3a3a;
+    transition: all 0.3 ease-in;
+}
+
+.pagination a:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1.2em;
+}

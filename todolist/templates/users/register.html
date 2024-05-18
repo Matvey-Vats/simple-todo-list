@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "tasks/css/register.css" %}">
+{% endblock css %}
+
+{% block content %}
+<section class="auth-form">
+    <h2>Sign-up</h2>
+    <form id="register-form" method='post' action="{% url "register" %}">
+        {% csrf_token %}
+        {% for f in form %}
+            <div class="form-group">
+                {{ f }}
+            </div>
+        {% endfor %}
+        <button type="submit">Register</button>
+        <p>Маєте акаунт? <a href="{% url "login" %}">Увійти</a></p>
+    </form>
+</section>
+{% endblock content %}

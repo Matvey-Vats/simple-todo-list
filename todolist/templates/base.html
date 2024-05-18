@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static "tasks/css/task_list.css" %}">
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="\" class="main-title"><h1>Мій лист завдань</h1></a>
+            <div class="auth-buttons">
+                
+                {% if user.is_authenticated %}
+                    <a href="{% url "logout" %}" id="logout-btn">Вийти</a>
+                {% else %}
+                    <a href="{% url "login" %}" id="login-btn">Увійти</a>
+                    <a href="{% url "register" %}" id="register-btn">Рєстрація</a>
+                {% endif %}
+                {% if user.is_superuser or user.is_staff %}
+                    <a href="{% url "admin:index" %}" id="admin-btn">Адмін панель</a>
+                {% endif %}
+                
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        
+        {% endblock content %}
+        
+    </main>
+</body>
+</html>

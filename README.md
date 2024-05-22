@@ -99,12 +99,8 @@ The application can be deployed on a web hosting service like PythonAnywhere. Co
 4. **Environment Variables:**
     - Set environment variables for secret keys and database credentials securely.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
 - [Django Documentation](https://docs.djangoproject.com/)
-- [PythonAnywhere](https://www.pythonanywhere.com/)
 
